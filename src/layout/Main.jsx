@@ -13,7 +13,7 @@ class Main extends React.Component {
     loading: true,
   };
   componentDidMount() {
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=matrix&`)
+    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=matrix&`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network was not ok!");
@@ -30,7 +30,7 @@ class Main extends React.Component {
   //   делаем эту функцию чтобы из нижнего компонента такого, как Search смочь повлиять на род. компонент main
   handleSearch = (filmName, type) => {
     this.setState({loading: true})
-    fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${filmName}&type=${type}&`)
+    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${filmName}&type=${type}&`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network was not ok!");

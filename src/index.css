@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  /* это сверху первое число */
+  padding: 0 1rem;
+}
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1rem 1rem;
+}
+
+.movies {
+  display: grid;
+  /* auto-fill - столбцы будут создаваться столько раз на страничке, сколько поместяться */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.preloader{
+  padding: 20rem 20rem ;
+}
+
+.button-search{
+  position: absolute;
+  top: 0;
+  right: 0.5rem
+}
